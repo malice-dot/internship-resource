@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Simple Worksheet - Internship</title>
+    <style>
+        @media print {
+            body {
+                background: white;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 210mm;
+            margin: 20px auto;
+            padding: 30px;
+            background: #f5f5f5;
+        }
+        
+        .worksheet {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+        
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+        }
+        
+        .student-info input {
+            border: none;
+            border-bottom: 2px solid #3498db;
+            background: transparent;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        
+        .print-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .print-btn:hover {
+            background: #2980b9;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            border-radius: 8px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-number {
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .grammar-box h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        .example {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 2px solid #3498db;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #ecf0f1;
+        }
+        
+        .exercise {
+            margin: 20px 0;
+        }
+        
+        .question {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #e74c3c;
+            border-radius: 5px;
+        }
+        
+        .blank {
+            display: inline-block;
+            min-width: 150px;
+            border-bottom: 2px solid #3498db;
+            margin: 0 5px;
+        }
+        
+        .word-bank {
+            background: #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px dashed #fdcb6e;
+        }
+        
+        .word-bank h4 {
+            margin-top: 0;
+            color: #d63031;
+        }
+        
+        .words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .word {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid #fdcb6e;
+            font-weight: bold;
+        }
+        
+        .tip-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .tip-box strong {
+            color: #155724;
+        }
+        
+        .answer-key {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 2px solid #4caf50;
+        }
+        
+        .answer-key h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        
+        ol {
+            line-height: 2;
+        }
+        
+        .matching {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .column-a, .column-b {
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .column-a h4, .column-b h4 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .match-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: #ecf0f1;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print This Worksheet</button>
+    
+    <div class="worksheet">
+        <div class="header">
+            <h1>📝 PAST SIMPLE WORKSHEET</h1>
+            <div class="subtitle">Talking About Your Internship Experience</div>
+            <div class="subtitle">Session 2 - Activity 2</div>
+        </div>
+        
+        <div class="student-info">
+            <div>
+                <strong>Name:</strong> <input type="text" placeholder="Your name">
+            </div>
+            <div>
+                <strong>Class:</strong> <input type="text" placeholder="Your class">
+            </div>
+            <div>
+                <strong>Date:</strong> <input type="text" placeholder="Date">
+            </div>
+        </div>
+
+        <!-- GRAMMAR REMINDER -->
+        <div class="grammar-box">
+            <h3>📚 GRAMMAR REMINDER: PAST SIMPLE</h3>
+            
+            <p><strong>When to use:</strong> To talk about finished actions in the past (your internship is finished!)</p>
+            
+            <div class="example">
+                <strong>REGULAR VERBS:</strong> Add -ED<br>
+                • work → work<strong>ed</strong><br>
+                • help → help<strong>ed</strong><br>
+                • learn → learn<strong>ed</strong>
+            </div>
+            
+            <div class="example">
+                <strong>IRREGULAR VERBS:</strong> Special forms (you must learn them!)<br>
+                • be → <strong>was/were</strong><br>
+                • have → <strong>had</strong><br>
+                • do → <strong>did</strong><br>
+                • make → <strong>made</strong><br>
+                • sell → <strong>sold</strong>
+            </div>
+            
+            <div class="example">
+                <strong>NEGATIVE:</strong> didn't + infinitive<br>
+                • I <strong>didn't work</strong> on Sundays<br>
+                • They <strong>didn't sell</strong> food
+            </div>
+            
+            <div class="example">
+                <strong>QUESTIONS:</strong> Did + subject + infinitive?<br>
+                • <strong>Did</strong> you <strong>work</strong> in a team?<br>
+                • <strong>Did</strong> she <strong>enjoy</strong> the internship?
+            </div>
+        </div>
+
+        <!-- SECTION 1: IRREGULAR VERBS TABLE -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">1</div>
+                IRREGULAR VERBS FOR INTERNSHIPS
+            </div>
+            
+            <p><strong>Complete the table with the past simple forms:</strong></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Infinitive</th>
+                        <th>Past Simple</th>
+                        <th>French</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>be</td>
+                        <td><span class="blank"></span></td>
+                        <td>être</td>
+                        <td>I ______ a sales assistant</td>
+                    </tr>
+                    <tr>
+                        <td>have</td>
+                        <td><span class="blank"></span></td>
+                        <td>avoir</td>
+                        <td>I ______ many responsibilities</td>
+                    </tr>
+                    <tr>
+                        <td>do</td>
+                        <td><span class="blank"></span></td>
+                        <td>faire</td>
+                        <td>I ______ my internship at Zara</td>
+                    </tr>
+                    <tr>
+                        <td>make</td>
+                        <td><span class="blank"></span></td>
+                        <td>faire/créer</td>
+                        <td>I ______ reservations</td>
+                    </tr>
+                    <tr>
+                        <td>meet</td>
+                        <td><span class="blank"></span></td>
+                        <td>rencontrer</td>
+                        <td>I ______ many customers</td>
+                    </tr>
+                    <tr>
+                        <td>deal with</td>
+                        <td><span class="blank"></span></td>
+                        <td>gérer</td>
+                        <td>I ______ complaints</td>
+                    </tr>
+                    <tr>
+                        <td>sell</td>
+                        <td><span class="blank"></span></td>
+                        <td>vendre</td>
+                        <td>I ______ clothes</td>
+                    </tr>
+                    <tr>
+                        <td>take</td>
+                        <td><span class="blank"></span></td>
+                        <td>prendre</td>
+                        <td>I ______ orders</td>
+                    </tr>
+                    <tr>
+                        <td>give</td>
+                        <td><span class="blank"></span></td>
+                        <td>donner</td>
+                        <td>I ______ information to customers</td>
+                    </tr>
+                    <tr>
+                        <td>speak</td>
+                        <td><span class="blank"></span></td>
+                        <td>parler</td>
+                        <td>I ______ English with tourists</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 2: FILL IN THE BLANKS -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">2</div>
+                COMPLETE THE SENTENCES
+            </div>
+            
+            <div class="word-bank">
+                <h4>💡 WORD BANK - Choose the correct past simple form:</h4>
+                <div class="words">
+                    <span class="word">worked</span>
+                    <span class="word">was</span>
+                    <span class="word">helped</span>
+                    <span class="word">learned</span>
+                    <span class="word">had</span>
+                    <span class="word">greeted</span>
+                    <span class="word">sold</span>
+                    <span class="word">dealt</span>
+                    <span class="word">made</span>
+                    <span class="word">answered</span>
+                </div>
+            </div>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. I <span class="blank"></span> as a receptionist at a hotel.
+                </div>
+                
+                <div class="question">
+                    2. I <span class="blank"></span> responsible for welcoming guests.
+                </div>
+                
+                <div class="question">
+                    3. Every day, I <span class="blank"></span> customers when they arrived.
+                </div>
+                
+                <div class="question">
+                    4. I <span class="blank"></span> to answer phone calls and take messages.
+                </div>
+                
+                <div class="question">
+                    5. I also <span class="blank"></span> reservations for rooms.
+                </div>
+                
+                <div class="question">
+                    6. Sometimes I <span class="blank"></span> with difficult customers.
+                </div>
+                
+                <div class="question">
+                    7. I <span class="blank"></span> my colleagues organize events.
+                </div>
+                
+                <div class="question">
+                    8. The shop <span class="blank"></span> clothes and accessories.
+                </div>
+                
+                <div class="question">
+                    9. I <span class="blank"></span> how to use the cash register.
+                </div>
+                
+                <div class="question">
+                    10. I <span class="blank"></span> all the phone calls during my shift.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: CORRECT THE MISTAKES -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">3</div>
+                FIND AND CORRECT THE MISTAKES
+            </div>
+            
+            <p><strong>Each sentence has ONE mistake. Find it and correct it:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. I work at Carrefour during my internship.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    2. I was helped customers find products.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    3. My supervisor teached me how to use the system.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    4. I didn't worked on Sundays.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    5. Did you enjoyed your internship?<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    6. I maked many reservations every day.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    7. The hotel have 50 rooms.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+                
+                <div class="question">
+                    8. I am responsible for stocking shelves.<br>
+                    <strong>Correction:</strong> <span class="blank"></span>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 TIP:</strong> Remember that after "didn't" and "Did", you use the INFINITIVE (base form) of the verb, not the past simple!
+            </div>
+        </div>
+
+        <!-- SECTION 4: WRITE ABOUT YOUR INTERNSHIP -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">4</div>
+                WRITE ABOUT YOUR INTERNSHIP
+            </div>
+            
+            <p><strong>Complete these sentences about YOUR internship using the past simple:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. I worked at <span class="blank" style="min-width: 250px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. I was <span class="blank" style="min-width: 300px;"></span><br>
+                    <em style="color: #7f8c8d;">(your position/role)</em>
+                </div>
+                
+                <div class="question">
+                    3. My main responsibilities were <span class="blank" style="min-width: 400px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. Every day, I <span class="blank" style="min-width: 450px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. I also had to <span class="blank" style="min-width: 450px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    6. I learned how to <span class="blank" style="min-width: 450px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    7. I enjoyed <span class="blank" style="min-width: 450px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    8. The most difficult part was <span class="blank" style="min-width: 400px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: TRANSLATION CHALLENGE -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">5</div>
+                TRANSLATION CHALLENGE
+            </div>
+            
+            <p><strong>Translate these sentences from French to English using the past simple:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. J'ai travaillé dans un hôtel pendant 4 semaines.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. J'étais responsable de l'accueil des clients.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    3. J'ai aidé mes collègues tous les jours.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. J'ai appris à utiliser la caisse.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. J'ai rencontré beaucoup de clients différents.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    6. Je n'ai pas travaillé le dimanche.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    7. Est-ce que tu as aimé ton stage ?<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    8. Mon superviseur m'a beaucoup aidé.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANSWER KEY -->
+        <div class="answer-key" style="page-break-before: always;">
+            <h3>🔑 ANSWER KEY (Teacher's Copy)</h3>
+            
+            <h4>Section 1: Irregular Verbs Table</h4>
+            <p>
+                1. was/were<br>
+                2. had<br>
+                3. did<br>
+                4. made<br>
+                5. met<br>
+                6. dealt with<br>
+                7. sold<br>
+                8. took<br>
+                9. gave<br>
+                10. spoke
+            </p>
+            
+            <h4>Section 2: Complete the Sentences</h4>
+            <p>
+                1. worked<br>
+                2. was<br>
+                3. greeted<br>
+                4. had<br>
+                5. made<br>
+                6. dealt<br>
+                7. helped<br>
+                8. sold<br>
+                9. learned<br>
+                10. answered
+            </p>
+            
+            <h4>Section 3: Correct the Mistakes</h4>
+            <p>
+                1. I <strong>worked</strong> at Carrefour during my internship.<br>
+                2. I <strong>helped</strong> customers find products.<br>
+                3. My supervisor <strong>taught</strong> me how to use the system.<br>
+                4. I didn't <strong>work</strong> on Sundays.<br>
+                5. Did you <strong>enjoy</strong> your internship?<br>
+                6. I <strong>made</strong> many reservations every day.<br>
+                7. The hotel <strong>had</strong> 50 rooms.<br>
+                8. I <strong>was</strong> responsible for stocking shelves.
+            </p>
+            
+            <h4>Section 5: Translation Challenge</h4>
+            <p>
+                1. I worked in a hotel for 4 weeks.<br>
+                2. I was responsible for welcoming customers/guests.<br>
+                3. I helped my colleagues every day.<br>
+                4. I learned (how) to use the cash register.<br>
+                5. I met many different customers.<br>
+                6. I didn't work on Sundays.<br>
+                7. Did you enjoy/like your internship?<br>
+                8. My supervisor helped me a lot.
+            </p>
+            
+            <p style="margin-top: 20px;"><strong>Note:</strong> Section 4 answers will vary depending on students' personal experiences.</p>
+        </div>
+    </div>
+</body>
+</html>
