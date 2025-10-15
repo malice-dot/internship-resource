@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superlative Worksheet - Internship</title>
+    <style>
+        @media print {
+            body {
+                background: white;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 210mm;
+            margin: 20px auto;
+            padding: 30px;
+            background: #f5f5f5;
+        }
+        
+        .worksheet {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+        
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+        }
+        
+        .student-info input {
+            border: none;
+            border-bottom: 2px solid #e74c3c;
+            background: transparent;
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        
+        .print-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .print-btn:hover {
+            background: #c0392b;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            border-radius: 8px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-number {
+            background: #e74c3c;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .grammar-box h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        .rule-box {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        
+        .example {
+            background: rgba(255,255,255,0.3);
+            padding: 12px;
+            border-radius: 5px;
+            margin: 8px 0;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 2px solid #e74c3c;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #fce4ec;
+        }
+        
+        .exercise {
+            margin: 20px 0;
+        }
+        
+        .question {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+        
+        .blank {
+            display: inline-block;
+            min-width: 150px;
+            border-bottom: 2px solid #e74c3c;
+            margin: 0 5px;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .tip-box strong {
+            color: #856404;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .warning-box strong {
+            color: #721c24;
+        }
+        
+        .answer-key {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 2px solid #4caf50;
+        }
+        
+        .answer-key h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        
+        .choice-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .choice {
+            padding: 12px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .choice:hover {
+            border-color: #e74c3c;
+            background: #fce4ec;
+        }
+        
+        .comparison-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .comparison-box h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print This Worksheet</button>
+    
+    <div class="worksheet">
+        <div class="header">
+            <h1>🏆 SUPERLATIVES WORKSHEET</h1>
+            <div class="subtitle">Evaluating Your Internship Experience</div>
+            <div class="subtitle">Session 3 - Grammar Focus</div>
+        </div>
+        
+        <div class="student-info">
+            <div>
+                <strong>Name:</strong> <input type="text" placeholder="Your name">
+            </div>
+            <div>
+                <strong>Class:</strong> <input type="text" placeholder="Your class">
+            </div>
+            <div>
+                <strong>Date:</strong> <input type="text" placeholder="Date">
+            </div>
+        </div>
+
+        <!-- GRAMMAR REMINDER -->
+        <div class="grammar-box">
+            <h3>📚 GRAMMAR REMINDER: SUPERLATIVES</h3>
+            
+            <p><strong>When to use:</strong> To say something is THE MOST or THE LEAST (comparing 3+ things)</p>
+            
+            <div class="rule-box">
+                <strong>SHORT ADJECTIVES (1 syllable):</strong> the + adjective + <strong>-est</strong><br>
+                <div class="example">
+                    hard → the hard<strong>est</strong><br>
+                    long → the long<strong>est</strong><br>
+                    • "Monday was <strong>the busiest</strong> day."
+                </div>
+            </div>
+            
+            <div class="rule-box">
+                <strong>LONG ADJECTIVES (2+ syllables):</strong> the + <strong>most/least</strong> + adjective<br>
+                <div class="example">
+                    difficult → <strong>the most</strong> difficult<br>
+                    interesting → <strong>the most</strong> interesting<br>
+                    • "That was <strong>the most challenging</strong> task."
+                </div>
+            </div>
+            
+            <div class="rule-box">
+                <strong>IRREGULAR FORMS:</strong><br>
+                <div class="example">
+                    good → <strong>the best</strong><br>
+                    bad → <strong>the worst</strong><br>
+                    • "It was <strong>the best</strong> experience of my life!"
+                </div>
+            </div>
+            
+            <div class="rule-box">
+                <strong>SPELLING CHANGES:</strong><br>
+                <div class="example">
+                    big → the bigg<strong>est</strong> (double consonant)<br>
+                    easy → the eas<strong>iest</strong> (y → iest)<br>
+                    nice → the nic<strong>est</strong> (remove e)
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-box">
+            <h4>📊 COMPARATIVE vs SUPERLATIVE - What's the difference?</h4>
+            <table style="margin: 0;">
+                <tr>
+                    <th>Type</th>
+                    <th>When to use</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><strong>Comparative</strong></td>
+                    <td>Comparing 2 things</td>
+                    <td>Monday was <strong>busier than</strong> Tuesday</td>
+                </tr>
+                <tr>
+                    <td><strong>Superlative</strong></td>
+                    <td>Comparing 3+ things (THE most)</td>
+                    <td>Monday was <strong>the busiest</strong> day of the week</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SECTION 1: FORMATION TABLE -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">1</div>
+                FORMING SUPERLATIVES
+            </div>
+            
+            <p><strong>Complete the table with the correct superlative forms:</strong></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Adjective</th>
+                        <th>Superlative Form</th>
+                        <th>Example Sentence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>good</td>
+                        <td><span class="blank"></span></td>
+                        <td>It was _______ internship ever!</td>
+                    </tr>
+                    <tr>
+                        <td>bad</td>
+                        <td><span class="blank"></span></td>
+                        <td>That was _______ day of my internship.</td>
+                    </tr>
+                    <tr>
+                        <td>interesting</td>
+                        <td><span class="blank"></span></td>
+                        <td>It was _______ experience.</td>
+                    </tr>
+                    <tr>
+                        <td>difficult</td>
+                        <td><span class="blank"></span></td>
+                        <td>That was _______ task.</td>
+                    </tr>
+                    <tr>
+                        <td>easy</td>
+                        <td><span class="blank"></span></td>
+                        <td>Monday was _______ day.</td>
+                    </tr>
+                    <tr>
+                        <td>busy</td>
+                        <td><span class="blank"></span></td>
+                        <td>Saturday was _______ day.</td>
+                    </tr>
+                    <tr>
+                        <td>hard</td>
+                        <td><span class="blank"></span></td>
+                        <td>That was _______ part of my job.</td>
+                    </tr>
+                    <tr>
+                        <td>rewarding</td>
+                        <td><span class="blank"></span></td>
+                        <td>It was _______ moment.</td>
+                    </tr>
+                    <tr>
+                        <td>helpful</td>
+                        <td><span class="blank"></span></td>
+                        <td>She was _______ colleague.</td>
+                    </tr>
+                    <tr>
+                        <td>big</td>
+                        <td><span class="blank"></span></td>
+                        <td>It was _______ challenge.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tip-box">
+                <strong>💡 TIP:</strong> Don't forget the article "THE" before superlatives! 
+                We say "the best," not just "best."
+            </div>
+        </div>
+
+        <!-- SECTION 2: MULTIPLE CHOICE -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">2</div>
+                CHOOSE THE CORRECT FORM
+            </div>
+            
+            <p><strong>Circle or underline the correct superlative form:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. Working at the hotel was <strong>(the best / the goodest / the most good)</strong> experience of my life.
+                </div>
+                
+                <div class="question">
+                    2. Friday was <strong>(the busiест / the most busy / the busiest)</strong> day of the week.
+                </div>
+                
+                <div class="question">
+                    3. Dealing with complaints was <strong>(the hardest / the most hard / the harder)</strong> part of my job.
+                </div>
+                
+                <div class="question">
+                    4. My supervisor was <strong>(the helpfullest / the most helpful / the helpfulest)</strong> person in the team.
+                </div>
+                
+                <div class="question">
+                    5. Learning the computer system was <strong>(the difficultest / the most difficult / the difficulter)</strong> task.
+                </div>
+                
+                <div class="question">
+                    6. That was <strong>(the worst / the baddest / the most bad)</strong> customer I ever met.
+                </div>
+                
+                <div class="question">
+                    7. Stocking shelves was <strong>(the most easy / the easiest / the easyest)</strong> task.
+                </div>
+                
+                <div class="question">
+                    8. It was <strong>(the most interesting / the interestingest / the interester)</strong> internship in my class.
+                </div>
+                
+                <div class="question">
+                    9. The morning shift was <strong>(the longest / the most long / the longеst)</strong> shift.
+                </div>
+                
+                <div class="question">
+                    10. That was <strong>(the most rewarding / the rewardingest / the rewardest)</strong> moment of my internship.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: COMPLETE THE SENTENCES -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">3</div>
+                COMPLETE ABOUT YOUR INTERNSHIP
+            </div>
+            
+            <p><strong>Complete these sentences with superlatives about YOUR internship experience:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. The best part of my internship was <span class="blank" style="min-width: 350px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. The worst part was <span class="blank" style="min-width: 400px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    3. The most difficult task was <span class="blank" style="min-width: 350px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. The easiest task was <span class="blank" style="min-width: 370px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. The busiest day was <span class="blank" style="min-width: 380px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    6. The most interesting thing I learned was <span class="blank" style="min-width: 300px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    7. The most helpful person was <span class="blank" style="min-width: 350px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    8. The longest day was <span class="blank" style="min-width: 380px;"></span><br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 REMEMBER:</strong> Use these sentences in your final presentation! They make your talk more interesting and personal.
+            </div>
+        </div>
+
+        <!-- SECTION 4: CORRECT THE MISTAKES -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">4</div>
+                FIND AND CORRECT THE MISTAKES
+            </div>
+            
+            <p><strong>Each sentence has ONE mistake with superlatives. Find and correct it:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. It was the goodest experience of my life.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. That was most difficult task.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    3. She was the helpfullest colleague.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. Monday was the more busy day.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. It was the most bad moment of my internship.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    6. That was the difficultest part.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    7. It was the interestingest internship.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+                
+                <div class="question">
+                    8. That was easyest task of all.<br>
+                    <strong>Correction:</strong> <span class="blank" style="min-width: 400px;"></span>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ COMMON MISTAKES:</strong><br>
+                • Forgetting "THE" before the superlative<br>
+                • Using "more/most" with short adjectives (✗ the most easy → ✓ the easiest)<br>
+                • Using "-est" with long adjectives (✗ the difficultest → ✓ the most difficult)<br>
+                • Wrong irregular forms (✗ the goodest → ✓ the best)
+            </div>
+        </div>
+
+        <!-- SECTION 5: TRANSLATION -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">5</div>
+                TRANSLATION CHALLENGE
+            </div>
+            
+            <p><strong>Translate these sentences from French to English using superlatives:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    1. C'était la meilleure expérience de ma vie.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. C'était la partie la plus difficile de mon stage.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    3. Samedi était le jour le plus chargé.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. C'était le client le plus difficile.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. Ma superviseure était la personne la plus utile.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    6. C'était la tâche la plus facile.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    7. C'était le moment le plus gratifiant.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+                
+                <div class="question">
+                    8. C'était le pire jour de mon stage.<br>
+                    <span class="blank" style="min-width: 500px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: SPEAKING PREPARATION -->
+        <div class="section">
+            <div class="section-title">
+                <div class="section-number">6</div>
+                PREPARE YOUR PRESENTATION
+            </div>
+            
+            <p><strong>Write 5 sentences with superlatives that you will use in your final presentation:</strong></p>
+            
+            <div class="exercise">
+                <div class="question">
+                    <strong>Example:</strong> "The best part of my internship was meeting customers from different countries because I could practice my English."
+                </div>
+                
+                <div class="question">
+                    1. <span class="blank" style="min-width: 500px;"></span><br>
+                    <span class="blank" style="min-width: 550px;"></span>
+                </div>
+                
+                <div class="question">
+                    2. <span class="blank" style="min-width: 500px;"></span><br>
+                    <span class="blank" style="min-width: 550px;"></span>
+                </div>
+                
+                <div class="question">
+                    3. <span class="blank" style="min-width: 500px;"></span><br>
+                    <span class="blank" style="min-width: 550px;"></span>
+                </div>
+                
+                <div class="question">
+                    4. <span class="blank" style="min-width: 500px;"></span><br>
+                    <span class="blank" style="min-width: 550px;"></span>
+                </div>
+                
+                <div class="question">
+                    5. <span class="blank" style="min-width: 500px;"></span><br>
+                    <span class="blank" style="min-width: 550px;"></span>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 PRESENTATION TIP:</strong> Using superlatives makes your presentation more dynamic and interesting! Compare "I enjoyed working with customers" vs "Working with customers was the most rewarding part of my internship."
+            </div>
+        </div>
+
+        <!-- ANSWER KEY -->
+        <div class="answer-key" style="page-break-before: always;">
+            <h3>🔑 ANSWER KEY (Teacher's Copy)</h3>
+            
+            <h4>Section 1: Forming Superlatives</h4>
+            <p>
+                1. the best<br>
+                2. the worst<br>
+                3. the most interesting<br>
+                4. the most difficult<br>
+                5. the easiest<br>
+                6. the busiest<br>
+                7. the hardest<br>
+                8. the most rewarding<br>
+                9. the most helpful<br>
+                10. the biggest
+            </p>
+            
+            <h4>Section 2: Choose the Correct Form</h4>
+            <p>
+                1. the best<br>
+                2. the busiest<br>
+                3. the hardest<br>
+                4. the most helpful<br>
+                5. the most difficult<br>
+                6. the worst<br>
+                7. the easiest<br>
+                8. the most interesting<br>
+                9. the longest<br>
+                10. the most rewarding
+            </p>
+            
+            <h4>Section 3: Complete About Your Internship</h4>
+            <p><em>Answers will vary - check for correct superlative formation and use of "the"</em></p>
+            
+            <h4>Section 4: Correct the Mistakes</h4>
+            <p>
+                1. It was the <strong>best</strong> experience of my life.<br>
+                2. That was <strong>the</strong> most difficult task.<br>
+                3. She was the most helpful colleague.<br>
+                4. Monday was the <strong>busiest</strong> day.<br>
+                5. It was the <strong>worst</strong> moment of my internship.<br>
+                6. That was the <strong>most difficult</strong> part.<br>
+                7. It was the <strong>most interesting</strong> internship.<br>
+                8. That was <strong>the easiest</strong> task of all.
+            </p>
+            
+            <h4>Section 5: Translation Challenge</h4>
+            <p>
+                1. It was the best experience of my life.<br>
+                2. It was the most difficult part of my internship.<br>
+                3. Saturday was the busiest day.<br>
+                4. It/He/She was the most difficult customer.<br>
+                5. My supervisor was the most helpful person.<br>
+                6. It was the easiest task.<br>
+                7. It was the most rewarding moment.<br>
+                8. It was the worst day of my internship.
+            </p>
+            
+            <h4>Section 6: Prepare Your Presentation</h4>
+            <p><em>Answers will vary - check for:</em><br>
+                • Correct superlative formation<br>
+                • Use of "the" before superlative<br>
+                • Relevance to internship experience<br>
+                • Complete sentences with explanations
+            </p>
+        </div>
+    </div>
+</body>
+</html>
